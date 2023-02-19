@@ -1,4 +1,4 @@
-# Projeto AJAX <img align="right" src="https://img.shields.io/static/v1?label=STATUS&message=Está%20Pronto&color=green&style=for-the-badge"/>
+# Projeto AJAX <img align="right" src="https://img.shields.io/static/v1?label=STATUS&message=Está %20Pronto &color=green&style=for-the-badge"/>
 
 
 <div align="center" >
@@ -6,7 +6,7 @@
 </div> 
 <br>
 
-> Para ver o projeto rodando você pode acessar este [Link](https://jordan-shoes-sage.vercel.app/).
+> Para ver o projeto rodando você pode acessar este [Link](https://stanley-felix-bergamo.github.io/Projeto-AJAX/).
 
 <h2>👨‍🏫 Créditos</h2>
 <p>Este projeto foi realizado nas aulas do Curso de Profissão: Engenheiro Front-end, da <a href="https://ebaconline.com.br/cursos">Ebac</a>.</p>
