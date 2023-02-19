@@ -9,7 +9,41 @@
 // });
 
 $(document).ready(function () {
+    aplicarMascara();
+    buscarEndereco();
+    tratandoFormulario();
+});
+
+function aplicarMascara() {
     $('#cep').mask('00000-000');
+}
+
+function tratandoFormulario() {
+    $('#formulario-pedido').submit(function (event) {
+        event.preventDefault();
+
+        if ($('#nome').val() == '') {
+            throw new Error('Digite o nome');
+        }
+        if ($('#sNome').val() == '') {
+            throw new Error('Digite o sobre nome');
+        }
+        if ($('#cep').val() == 0) {
+            throw new Error('Digite o numero do CEP');
+        }
+        if ($('#email').val() == '') {
+            throw new Error('Digite o E-mail');
+        }
+        if ($('#numero').val() == 0) {
+            throw new Error('Digite o numero');
+        }
+        if ($('#endereco').val() == '') {
+            throw new Error('Digite o endereço');
+        }
+    });
+}
+
+function buscarEndereco() {
 
     $('#btn-buscar-cep').click(function () {
         const cep = $('#cep').val();
@@ -43,10 +77,17 @@ $(document).ready(function () {
                 const estado = json.uf;
                 const endereco = `${logradouro}, ${bairro}, - ${cidade} - ${estado}`
                 $('#endereco').val(endereco);
+            })
+            .catch(function (erro) {
+                alert("Ocorreu um erro ao buscar o endereço, tente novamente mais tarde.");
+                console.log(erro);
+            })
+            .finally(function () {
                 setTimeout(function () {
                     $(botao).find('i').removeClass('d-none');
                     $(botao).find('span').addClass('d-none');
-                }, 3000);
+                }, 1000);
             });
     });
-});
+}
+
